@@ -48,11 +48,15 @@ int main()
                 printf("Ingrese el 1er operando: \n");
                 scanf("%d", &primerOperando);
                 primerOperandoCargado = 1;
+
+                system("cls");
                 break;
             case 2:
                 printf("Ingrese el 2do operando: \n");
                 scanf("%d", &segundoOperando);
                 segundoOperandoCargado = 1;
+
+                system("cls");
                 break;
             case 3:
                 if(primerOperandoCargado != 0 && segundoOperandoCargado != 0){
@@ -61,42 +65,90 @@ int main()
 
                     primerOperandoCargado  = 0;
                     segundoOperandoCargado = 0;
+
                 }else{
-                    prinf("Debe ingresar ambos operandos antes para poder realizar la suma.")
+                    printf("Debe ingresar ambos operandos antes para poder realizar la suma.");
                 }
+
+                system("pause");
+                system("cls");
 
                 break;
             case 4:
-                resultadoResta = restar(primerOperando, segundoOperando);
-                printf("%d - %d = %d\n", primerOperando, segundoOperando, resultadoResta);
-                primerOperandoCargado = 0;
-                segundoOperandoCargado = 0;
+                if(primerOperandoCargado != 0 && segundoOperandoCargado != 0){
+                    resultadoResta = restar(primerOperando, segundoOperando);
+                    printf("%d - %d = %d\n", primerOperando, segundoOperando, resultadoResta);
+                    primerOperandoCargado = 0;
+                    segundoOperandoCargado = 0;
+                }else{
+                    printf("Debe ingresar ambos operandos antes para poder realizar la resta.");
+                }
+
+                system("pause");
+                system("cls");
+
                 break;
             case 5:
-                resultadoDivision = dividir(primerOperando, segundoOperando);
-                printf("%d / %d = %f\n", primerOperando, segundoOperando, resultadoDivision);
-                primerOperandoCargado = 0;
-                segundoOperandoCargado = 0;
+                if(primerOperandoCargado != 0 && segundoOperandoCargado != 0){
+                    resultadoDivision = dividir(primerOperando, segundoOperando);
+                    printf("%d / %d = %f\n", primerOperando, segundoOperando, resultadoDivision);
+                    primerOperandoCargado = 0;
+                    segundoOperandoCargado = 0;
+                }else{
+                    printf("Debe ingresar ambos operandos antes para poder realizar la división.");
+                }
+
+                system("pause");
+                system("cls");
+
                 break;
             case 6:
-                resultadoMultiplicacion = multiplicar(primerOperando, segundoOperando);
-                printf("%d x %d = %d\n", primerOperando, segundoOperando, resultadoMultiplicacion);
-                primerOperandoCargado = 0;
-                segundoOperandoCargado = 0;
+                if(primerOperandoCargado != 0 && segundoOperandoCargado != 0){
+                    resultadoMultiplicacion = multiplicar(primerOperando, segundoOperando);
+                    printf("%d x %d = %d\n", primerOperando, segundoOperando, resultadoMultiplicacion);
+                    primerOperandoCargado = 0;
+                    segundoOperandoCargado = 0;
+                }else{
+                    printf("Debe ingresar ambos operandos antes para poder realizar la multiplicación.");
+                }
+
+                system("pause");
+                system("cls");
                 break;
             case 7:
-                resultadoFactorial = factorial(primerOperando);
-                printf("%d! = %d\n", primerOperando, resultadoFactorial);
-                primerOperando = 0;
-                segundoOperando = 0;
+                if(primerOperandoCargado != 0){
+                    resultadoFactorial = factorial(primerOperando);
+                    printf("%d! = %d\n", primerOperando, resultadoFactorial);
+                    primerOperando = 0;
+                    segundoOperando = 0;
+                }else{
+                    printf("Debe ingresar el primer operando para poder calcular su factorial.");
+                }
+
+                system("pause");
+                system("cls");
                 break;
             case 8:
+                if(primerOperandoCargado != 0 && segundoOperandoCargado != 0){
+                    printf("%d + %d = %d\n", sumar(primerOperando, segundoOperando));
+                    printf("%d - %d = %d\n", restar(primerOperando, segundoOperando));
+                    printf("%d / %d = %f\n", dividir(primerOperando, segundoOperando));
+                    printf("%d x %d = %d\n", multiplicar(primerOperando, segundoOperando));
+                    printf("%d! = %d\n", factorial(primerOperando));
+                    primerOperando = 0;
+                    segundoOperando = 0;
+                }else{
+                    printf("Para realizar todas las operaciones debe ingresar ambos operandos previamente.");
+                }
+
+                system("pause");
+                system("cls");
                 break
                 ;
             case 9:
                 seguir = 'n';
                 break;
-        }
+            }
 
         }
     return 0;
