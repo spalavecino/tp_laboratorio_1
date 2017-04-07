@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1491410324 source:e:\utn\tp_laboratorio_1\funciones.c
+1491585861 source:e:\utn\tp_laboratorio_1\funciones.c
+	"funciones.h"
 
-1491513226 source:e:\utn\tp_laboratorio_1\main.c
+1491586705 source:e:\utn\tp_laboratorio_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 
-1491509014 e:\utn\tp_laboratorio_1\funciones.h
+1491525017 e:\utn\tp_laboratorio_1\funciones.h
 
