@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1497736806 source:d:\mis cosas\descargas\tp_3_cascara\tp_3_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"funciones.h"
+
+1496781022 d:\mis cosas\descargas\tp_3_cascara\tp_3_cascara\utn.h
+
+1497735022 d:\mis cosas\descargas\tp_3_cascara\tp_3_cascara\funciones.h
+
+1497738792 source:d:\mis cosas\descargas\tp_3_cascara\tp_3_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1496781020 source:d:\mis cosas\descargas\tp_3_cascara\tp_3_cascara\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1497847270 source:d:\colegio\programacion utn fra\tp_3_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1497846141 d:\colegio\programacion utn fra\tp_3_cascara\funciones.h
+
+1497728390 source:d:\colegio\programacion utn fra\tp_3_cascara\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1497728390 d:\colegio\programacion utn fra\tp_3_cascara\utn.h
+
+1497847503 source:d:\colegio\programacion utn fra\tp_3_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"funciones.h"
+
