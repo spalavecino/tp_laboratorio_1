@@ -14,11 +14,12 @@ int main()
 
     while(seguir=='s')
     {
+        printf("*** MENU ***\n\n");
         printf("1- Agregar persona\n");
         printf("2- Borrar persona\n");
         printf("3- Imprimir lista ordenada por  nombre\n");
-        printf("4- Imprimir grafico de edades\n\n");
-        printf("5- Salir\n");
+        printf("4- Imprimir grafico de edades\n");
+        printf("5- Salir\n\n\n");
 
         scanf("%d",&opcion);
 
@@ -29,23 +30,23 @@ int main()
                 printf("INGRESO\n\n");
                 indice = obtenerEspacioLibre(personas, CANT_P);
                 if(indice == -1){
-                    printf("NO HAY LUGAR PARA NUEVOS INGRESOS\n");
+                    printf("\nNO HAY LUGAR PARA NUEVOS INGRESOS\n\n");
                     break;
                 }
 
                 if(!getStringLetras("Ingresar nombre: ", auxNombre)){
-                    printf("EL NOMBRE DEBE CONTENER SOLO LETRAS\n");
+                    printf("\nEL NOMBRE DEBE CONTENER SOLO LETRAS\n\n");
                     break;
                 }
 
 
                 if(!getStringNumeros("Ingresar dni: ", auxDni)){
-                    printf("EL DNI DEBE CONTENER SOLO NUMEROS\n");
+                    printf("\nEL DNI DEBE CONTENER SOLO NUMEROS\n\n");
                     break;
                 }
 
                 if(!getStringNumeros("Ingresar edad: ", auxEdad)){
-                    printf("LA EDAD DEBE CONTENER SOLO NUMEROS\n");
+                    printf("\nLA EDAD DEBE CONTENER SOLO NUMEROS\n\n");
                     break;
                 }
 
@@ -54,36 +55,33 @@ int main()
                 personas[indice].dni = atoi(auxDni);
                 personas[indice].estado = 1;
 
-                printf("INGRESO EXITOSO.\n");
-                system("pause");
-                system("cls");
+                printf("\nINGRESO EXITOSO.\n\n");
                 break;
             case 2:
                 printf("BORRAR\n\n");
                 if(arrayPersonasVacio(personas, CANT_P)){
-                    printf("NO HAY PERSONAS INGRESADAS\n");
+                    printf("\nNO HAY PERSONAS INGRESADAS\n\n");
                     break;
                 }
 
                 if(!getStringNumeros("Ingrese dni de la persona a borrar: ", auxDni)){
-                    printf("EL DNI DEBE CONTENER NUMEROS SOLAMENTE\n");
+                    printf("\nEL DNI DEBE CONTENER NUMEROS SOLAMENTE\n\n");
                     break;
                 }
 
                 indice = buscarPorDni(personas, atoi(auxDni), CANT_P);
                 if(indice == -1 || !personas[indice].estado){
-                    printf("NO EXISTE PERSONA INGRESADA CON ESTE DNI.\n");
+                    printf("\nNO EXISTE PERSONA INGRESADA CON ESTE DNI.\n\n");
                     break;
                 }
 
                 personas[indice].estado = 0;
-                printf("BAJA EXITOSA.\n");
-                system("pause");
-                system("cls");
+                printf("\nBAJA EXITOSA.\n\n");
                 break;
             case 3:
+                printf("IMPRIMIR PERSONAS\n\n");
                 if(arrayPersonasVacio(personas, CANT_P)){
-                    printf("NO HAY PERSONAS INGRESADAS\n");
+                    printf("\nNO HAY PERSONAS INGRESADAS\n\n");
                     break;
                 }
 
@@ -93,24 +91,23 @@ int main()
 
                 ordenarPersonasPorNombre(personas, CANT_P);
                 imprimirPersonas(personas, CANT_P);
-                system("pause");
-                system("cls");
                 break;
             case 4:
+                printf("IMPRIMIR GRAFICO DE EDADES\n\n");
                 if(arrayPersonasVacio(personas, CANT_P)){
-                    printf("NO HAY PERSONAS INGRESADAS\n");
+                    printf("\nNO HAY PERSONAS INGRESADAS\n\n");
                     break;
                 }
 
-                printf("GRAFICOS POR EDADES\n\n");
+                printf("\nGRAFICOS POR EDADES\n\n");
                 imprimirGraficoEdades(personas, CANT_P);
-                system("pause");
-                system("cls");
                 break;
             case 5:
                 seguir = 'n';
                 break;
         }
+        system("pause");
+        system("cls");
     }
 
     return 0;
